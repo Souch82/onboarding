@@ -470,7 +470,7 @@ async function actionSetupWebhook() {
     }
   `);
   const existing = checkResult.data?.webhooks || [];
-  const alreadyExists = existing.some(wh => wh.event === "create_pulse");
+  const alreadyExists = existing.some(wh => wh.event === "create_item");
 
   if (alreadyExists) {
     return { status: "already_exists", webhooks: existing };
@@ -481,7 +481,7 @@ async function actionSetupWebhook() {
       create_webhook(
         board_id: ${RESERVATION_BOARD_ID},
         url: "${WEBHOOK_URL}",
-        event: create_pulse
+        event: create_item
       ) {
         id
         board_id
