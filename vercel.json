@@ -1,1 +1,7 @@
-
+{
+  "functions": {
+    "api/onboarding.js": {
+      "maxDuration": 60
+    }
+  }
+}
